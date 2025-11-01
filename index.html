@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find the top 3 dentists in your town. Fast, reliable, and cost-effective professional dental services with licensed and insured practitioners.">
+    <meta name="keywords" content="dentist directory, dental services, professional dentists, licensed dentists">
+    <meta name="author" content="Dentist Directory">
+    <title>Dentist Directory - Find Top Dentists Near You</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+        }
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-tooth text-white text-lg"></i>
+                </div>
+                <span class="font-bold text-xl text-gray-900">DentistDirectory</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#features" class="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium">Features</a>
+                <a href="#benefits" class="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium">Benefits</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium">Testimonials</a>
+                <a href="#faq" class="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium">FAQ</a>
+                <a href="https://mydentist.com" target="_blank" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg btn-primary">Get Started</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden mobile-menu-button p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300">
+                <i class="fas fa-bars text-gray-900 text-xl"></i>
+            </button>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu hidden absolute top-full left-0 right-0 bg-white border-t border-gray-200 md:hidden">
+                <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col space-y-4">
+                    <a href="#features" class="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium py-2">Features</a>
+                    <a href="#benefits" class="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium py-2">Benefits</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium py-2">Testimonials</a>
+                    <a href="#faq" class="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium py-2">FAQ</a>
+                    <a href="https://mydentist.com" target="_blank" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg btn-primary text-center">Get Started</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20 md:py-32 lg:py-40 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                Top 3 Dentists in Your Town
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed max-w-3xl mx-auto">
+                Discover the most trusted and highly-rated dental professionals in your area. Our comprehensive directory connects you with licensed, insured dentists who are committed to providing exceptional care.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="https://mydentist.com" target="_blank" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-xl btn-primary transition-all duration-300">
+                    Find Your Dentist
+                </a>
+                <a href="#features" class="border-2 border-gray-900 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-900 hover:text-white transition-all duration-300">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Why Choose Our Directory</h2>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto">Experience the difference with our carefully curated selection of dental professionals</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1: Fast -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-bolt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Lightning-Fast Appointments</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Get quick access to available appointments with minimal wait times. Our streamlined booking system ensures you can schedule your dental visit within 24-48 hours in most cases.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mr-3 mt-1 flex-shrink-0"></i>
+                            <span>Real-time availability updates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mr-3 mt-1 flex-shrink-0"></i>
+                            <span>Instant confirmation notifications</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mr-3 mt-1 flex-shrink-0"></i>
+                            <span>Flexible scheduling options</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2: Reliable -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Trusted & Verified Professionals</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Every dentist in our directory has been thoroughly vetted and verified. We ensure all practitioners maintain current licenses and maintain the highest standards of professional conduct.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-purple-600 mr-3 mt-1 flex-shrink-0"></i>
+                            <span>Verified credentials and licenses</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-purple-600 mr-3 mt-1 flex-shrink-0"></i>
+                            <span>Comprehensive background checks</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-purple-600 mr-3 mt-1 flex-shrink-0"></i>
+                            <span>Continuous quality monitoring</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3: Cost-Effective -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-dollar-sign text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Affordable & Transparent Pricing</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Compare prices and find the best value for your dental care needs. Our directory provides transparent pricing information so you can make informed decisions without hidden costs.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mr-3 mt-1 flex-shrink-0"></i>
+                            <span>Clear, upfront pricing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mr-3 mt-1 flex-shrink-0"></i>
+                            <span>Insurance acceptance information</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-600 mr-3 mt-1 flex-shrink-0"></i>
+                            <span>Flexible payment plans available</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Professional Dental Care You Can Trust</h2>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto">All our dentists are licensed, insured, and committed to your oral health</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Benefits Content -->
+                <div>
+                    <div class="space-y-8">
+                        <!-- Benefit 1 -->
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
+                                    <i class="fas fa-certificate text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Licensed Professionals</h3>
+                                <p class="text-gray-700 leading-relaxed">
+                                    Every dentist in our directory holds current, valid licenses from their respective state dental boards. We verify credentials annually to ensure ongoing compliance with all regulatory requirements and professional standards.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 2 -->
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-purple-600 text-white">
+                                    <i class="fas fa-shield-alt text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Fully Insured Coverage</h3>
+                                <p class="text-gray-700 leading-relaxed">
+                                    All practitioners maintain comprehensive malpractice insurance and liability coverage. This protects both you and the dental professional, ensuring you receive compensation if any issues arise during your treatment.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 3 -->
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-600 text-white">
+                                    <i class="fas fa-star text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Highly Rated & Reviewed</h3>
+                                <p class="text-gray-700 leading-relaxed">
+                                    Access authentic patient reviews and ratings to make informed decisions. Our community-driven ratings system helps you find dentists with proven track records of patient satisfaction and quality care.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefits Image -->
+                <div class="hidden md:block">
+                    <img src="https://images.unsplash.com/photo-1606811841689-23dfb25ce4c5?w=600&h=500&fit=crop" alt="Professional dental care" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">About Dentist Directory</h2>
+            </div>
+
+            <div class="space-y-8 text-lg text-gray-700 leading-relaxed">
+                <p class="text-justify">
+                    Dentist Directory was founded in 2018 with a simple yet powerful mission: to revolutionize how people find and connect with quality dental care providers. Our founder, a healthcare entrepreneur with over 15 years of experience in the medical industry, recognized a critical gap in the market. Patients struggled to find reliable information about dentists, often relying on outdated referrals or misleading advertisements. We started as a small team of passionate healthcare professionals and technology experts, determined to build a platform that would empower patients to make informed decisions about their oral health. Today, we've grown to serve over 100,000 patients across multiple regions, connecting them with thousands of verified dental professionals.
+                </p>
+
+                <p class="text-justify">
+                    At our core, we believe that everyone deserves access to quality dental care without confusion or uncertainty. Our mission is to build trust in the dental care industry through transparency, verification, and authentic patient feedback. We are committed to maintaining the highest standards of integrity in everything we do—from vetting dental professionals to protecting patient privacy. Our core values of transparency, reliability, and patient-centricity guide every decision we make. We continuously innovate our platform to make finding dental care easier, faster, and more affordable. We partner closely with dental professionals who share our commitment to excellence and patient satisfaction, creating a community where quality care is accessible to everyone.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">What Our Patients Say</h2>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto">Real experiences from real patients who found their perfect dentist through our directory</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-gray-900 text-lg">Sarah Mitchell</h4>
+                            <p class="text-sm text-gray-600">Marketing Manager</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        "Finding a dentist has never been easier! I used Dentist Directory to locate a provider near my office, and I was able to book an appointment within 24 hours. The dentist was professional, caring, and the entire experience was seamless. Highly recommended!"
+                    </p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-gray-900 text-lg">James Rodriguez</h4>
+                            <p class="text-sm text-gray-600">Small Business Owner</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        "I was nervous about finding a trustworthy dentist, but this directory gave me the confidence I needed. All the dentists are verified, and I could read authentic patient reviews before making my choice. Great service!"
+                    </p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-gray-900 text-lg">Emily Chen</h4>
+                            <p class="text-sm text-gray-600">Healthcare Professional</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        "The transparency about pricing was exactly what I needed. I compared three dentists in my area and found one that fit my budget perfectly without compromising on quality. The directory made the decision-making process so much simpler."
+                    </p>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-gray-900 text-lg">Michael Thompson</h4>
+                            <p class="text-sm text-gray-600">Tech Entrepreneur</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        "I've recommended Dentist Directory to all my friends and family. The platform is user-friendly, the information is reliable, and most importantly, I found an excellent dentist who takes great care of my family's oral health."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-lg text-gray-700">Find answers to common questions about our dentist directory and services</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-white rounded-lg border border-gray-200 overflow-hidden">
+                    <button class="faq-question w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors duration-300 cursor-pointer">
+                        <h3 class="text-lg font-bold text-gray-900 text-left">How do you verify the dentists in your directory?</h3>
+                        <i class="faq-icon fas fa-chevron-down text-blue-600 transition-all duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            We employ a rigorous verification process to ensure all dentists in our directory meet the highest standards. Each practitioner undergoes comprehensive background checks, credential verification with state dental boards, and malpractice insurance confirmation. We verify licenses annually and continuously monitor for any disciplinary actions or complaints. Additionally, we collect and verify patient reviews to ensure authentic feedback about each dentist's practice and patient satisfaction levels.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-white rounded-lg border border-gray-200 overflow-hidden">
+                    <button class="faq-question w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors duration-300 cursor-pointer">
+                        <h3 class="text-lg font-bold text-gray-900 text-left">Can I book appointments directly through your platform?</h3>
+                        <i class="faq-icon fas fa-chevron-down text-blue-600 transition-all duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            Our directory provides comprehensive information about each dentist, including their contact details, office hours, and available services. While some dentists may have integrated online booking through our platform, most appointments are scheduled directly through the dental office via phone, email, or their own booking system. We provide all necessary contact information to make scheduling quick and easy. We're continuously working to expand our online booking capabilities to make the process even more convenient for our users.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-white rounded-lg border border-gray-200 overflow-hidden">
+                    <button class="faq-question w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors duration-300 cursor-pointer">
+                        <h3 class="text-lg font-bold text-gray-900 text-left">Are the dentists in your directory accepting new patients?</h3>
+                        <i class="faq-icon fas fa-chevron-down text-blue-600 transition-all duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            Most dentists in our directory are accepting new patients, but this can vary by practice. We update our listings regularly to reflect current patient acceptance status. When you view a dentist's profile, you'll see information about whether they're currently accepting new patients. We recommend contacting the dental office directly to confirm their current status before scheduling your appointment. Our directory makes this easy by providing multiple contact methods for each practice.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-white rounded-lg border border-gray-200 overflow-hidden">
+                    <button class="faq-question w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors duration-300 cursor-pointer">
+                        <h3 class="text-lg font-bold text-gray-900 text-left">How can I compare pricing between different dentists?</h3>
+                        <i class="faq-icon fas fa-chevron-down text-blue-600 transition-all duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            Our directory provides transparent pricing information for common dental procedures at each practice. You can easily compare costs for services like cleanings, fillings, and other treatments across different dentists in your area. Each dentist's profile includes their typical fee schedule and information about accepted insurance plans. We also highlight whether practices offer payment plans or discount programs. For specific procedures or complex treatments, we recommend contacting the dental office directly for accurate quotes tailored to your needs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-white rounded-lg border border-gray-200 overflow-hidden">
+                    <button class="faq-question w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors duration-300 cursor-pointer">
+                        <h3 class="text-lg font-bold text-gray-900 text-left">Is my personal information safe when using your directory?</h3>
+                        <i class="faq-icon fas fa-chevron-down text-blue-600 transition-all duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 py-4 bg-gray-50 border-t border-gray-200">
+                        <p class="text-gray-700 leading-relaxed">
+                            Yes, your privacy and security are our top priorities. We implement industry-standard encryption and security protocols to protect all personal information. Our platform complies with HIPAA regulations and other relevant privacy laws. We never share your personal data with third parties without your explicit consent. Our privacy policy clearly outlines how we collect, use, and protect your information. You can review our complete privacy policy on our website for detailed information about our data protection practices and your rights as a user.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1606811841689-23dfb25ce4c5?w=1200&h=600&fit=crop" alt="Dental care background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                Ready to Find Your Perfect Dentist?
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-100 mb-8 leading-relaxed">
+                Join thousands of patients who have found trusted dental care through our comprehensive directory. Start your search today and experience the difference quality dental care makes.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="https://mydentist.com" target="_blank" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-xl btn-primary transition-all duration-300">
+                    Explore Dentists Now
+                </a>
+                <a href="mailto:crawford.peterson.sr@gmail.com" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-tooth text-white text-lg"></i>
+                        </div>
+                        <span class="font-bold text-xl text-white">DentistDirectory</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Your trusted platform for finding verified, licensed dentists in your area. Quality dental care made simple and accessible.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors duration-300">Features</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-white transition-colors duration-300">Benefits</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors duration-300">Testimonials</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors duration-300">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition-colors duration-300">Blog</a></li>
+                        <li><a href="https://mydentist.com" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">Find Dentists</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-4">Get In Touch</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-blue-600 mr-3 mt-1 flex-shrink-0"></i>
+                            <a href="mailto:crawford.peterson.sr@gmail.com" class="text-gray-400 hover:text-white transition-colors duration-300">crawford.peterson.sr@gmail.com</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-globe text-blue-600 mr-3 mt-1 flex-shrink-0"></i>
+                            <a href="https://mydentist.com" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">mydentist.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Social Links and Copyright -->
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="#" class="text-gray-400 hover:text-blue-600 transition-colors duration-300" aria-label="Facebook">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-600 transition-colors duration-300" aria-label="Twitter">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-600 transition-colors duration-300" aria-label="Instagram">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-600 transition-colors duration-300" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                </div>
+                <p class="text-gray-400 text-center md:text-right">
+                    &copy; 2025 Dentist Directory. All rights reserved. | Connecting you with quality dental care.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // FAQ Accordion Toggle
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', () => {
+                        const answer = item.querySelector('.faq-answer');
+                        const isOpen = !answer.classList.contains('hidden');
+                        
+                        // Close all other FAQ items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.querySelector('.faq-answer')?.classList.add('hidden');
+                                otherItem.querySelector('.faq-icon')?.classList.remove('rotate-180');
+                            }
+                        });
+                        
+                        // Toggle current item
+                        answer?.classList.toggle('hidden');
+                        item.querySelector('.faq-icon')?.classList.toggle('rotate-180');
+                    });
+                }
+            });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
